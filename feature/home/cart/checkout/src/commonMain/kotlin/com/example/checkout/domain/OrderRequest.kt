@@ -1,7 +1,7 @@
-package com.nutrisport.checkout.domain
+package com.example.checkout.domain
 
-import com.nutrisport.shared.Constants.CANCEL_URL
-import com.nutrisport.shared.Constants.RETURN_URL
+
+import com.example.shared.Constants
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -52,7 +52,7 @@ data class ShippingAddress(
 
 @Serializable
 data class PaymentSource(
-    val paypal: PayPal = PayPal()
+    val paypal: PayPal= PayPal()
 )
 
 @Serializable
@@ -77,9 +77,9 @@ data class ExperienceContext(
     @SerialName("user_action")
     val userAction: String = "PAY_NOW",
     @SerialName("return_url")
-    val returnUrl: String = RETURN_URL,
+    val returnUrl: String = Constants.RETURN_URL,
     @SerialName("cancel_url")
-    val cancelUrl: String = CANCEL_URL
+    val cancelUrl: String = Constants.CANCEL_URL
 )
 
 @Serializable

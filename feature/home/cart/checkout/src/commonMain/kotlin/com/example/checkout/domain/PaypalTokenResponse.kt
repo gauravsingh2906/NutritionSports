@@ -1,3 +1,10 @@
 package com.example.checkout.domain
 
-data class PaypalTokenResponse()
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class PaypalTokenResponse(
+    @SerialName("access_token")
+    val accessToken:String
+)
